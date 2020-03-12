@@ -1,0 +1,19 @@
+namespace: "sachaboudjema"
+name: "tipsconfig"
+version: "0.1.0"
+readme: "README.md"
+license: 
+  - "GPL-3.0-or-later"
+authors:
+  - "Sacha Boudjema <sachaboudjema@gmail.com> @sachaboudjema"
+description: "An Ansible collection to interact with Aruba Clearpass XML Configuration API."
+tags:
+  - aruba
+  - tipsconfig
+  - tips
+  - clearpass
+  - networking
+  - soap
+  - xml
+repository: "https://github.com/sachaboudjema/ansible-collection-tipsconfig"
+issues: "https://github.com/sachaboudjema/ansible-collection-tipsconfig/issues"
