@@ -7,6 +7,12 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
+DOCUMENTATION = r'''
+author: Sacha Boudjema (@sachaboudjema)
+short_description: Action to render templates used with the tipsconfig_write module.
+version_added: "2.9"
+'''
+
 import os
 import jinja2
 

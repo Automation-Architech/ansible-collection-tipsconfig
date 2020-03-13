@@ -7,6 +7,12 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
+DOCUMENTATION = r'''
+author: Sacha Boudjema (@sachaboudjema)
+short_description: Reusable argspec definitions.
+version_added: "2.9"
+'''
+
 from ansible_collections.sachaboudjema.tipsconfig.plugins.module_utils.choices import EntityChoices, MatchChoices
 
 

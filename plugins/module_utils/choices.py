@@ -7,6 +7,12 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
+DOCUMENTATION = r'''
+author: Sacha Boudjema (@sachaboudjema)
+short_description: Value sets to be sued as argspec choices.
+version_added: "2.9"
+'''
+
 
 class EntityStatusChoices:
     CHOICES = (

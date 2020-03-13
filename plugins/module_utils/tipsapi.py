@@ -7,6 +7,12 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
+DOCUMENTATION = r'''
+author: Sacha Boudjema (@sachaboudjema)
+short_description: Object representations of API messages.
+version_added: "2.9"
+'''
+
 import re
 
 from xml.etree import ElementTree
