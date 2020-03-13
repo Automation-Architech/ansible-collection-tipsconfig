@@ -18,7 +18,7 @@ import re
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, SubElement, QName
 from ansible.errors import AnsibleError
-from ansible_collections.sachaboudjema.tipsconfig.plugins.module_utils.choices import EntityStatusChoices
+from ansible_collections.sachaboudjema.tipsconfig.plugins.module_utils.choices import EntityChoices, EntityStatusChoices
 
 VERSION = '6.7'
 ROOT_PATH = '/tipsapi/config'
@@ -50,7 +50,9 @@ class TipsApiRequest(TipsApiXML):
         self.entity = entity
         self.path = None
         self.xml = Element(QName(XMLNS, 'TipsApiRequest'))
-        SubElement(self.xml, QName(XMLNS, 'TipsHeader'), {'version': VERSION})
+        tips_header = SubElement(self.xml, QName(XMLNS, 'TipsHeader'), {'version': VERSION})
+        if entity in (EntityChoices.GUEST_USER, EntityChoices.ONBOARD_DEVICE):
+            tips_header.set('source', 'Guest')
 
     @staticmethod
     def delete(cls, entity, identifiers):
